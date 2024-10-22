@@ -14,7 +14,7 @@ export const generatePassword = (length, options) => {
 
     // Throw an error if no character sets are selected
     if (characterSet === '') {
-        throw new Error("At least one character type must be selected.");
+        throw new Error("centang salah satu kocakkk.");
     }
 
     let password = "";
