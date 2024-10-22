@@ -1,103 +1,38 @@
-#backgroundVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%; 
-    min-height: 100%;
-    z-index: -1; /* Membuat video berada di belakang konten */
-    object-fit: cover; /* Memastikan video mengisi seluruh layar tanpa distorsi */
-    filter: brightness(50%); /* Membuat video sedikit lebih gelap agar teks lebih terbaca */
-}
-
 body {
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #003cff; /* Warna latar belakang */
-    margin: 0;
+    box-shadow: #732d5d;
+    background-image: linear-gradient(to right, rgb(91, 107, 199) , rgb(190, 82, 129)); /* Background color */
 }
 
 .container {
     text-align: center;
     padding: 30px;
-    background-color: #ffffff; /* Warna latar belakang untuk kontainer */
+    background-color: #ff00e1; /* Background color for container */
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     width: 90%;
     max-width: 400px;
 }
 
-/* Gaya untuk heading */
+/* TODO: Add styles for labels, inputs, buttons, and output text */
 h1 {
     font-size: 2.2em;
     margin-bottom: 20px;
-    color: #4a4a4a; /* Warna tajuk */
+    color: #4a4a4a; /* Header color */
 }
 
-/* Gaya untuk label */
-label {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 1em;
-    color: #333;
-    text-align: left;
+/* Add more styles here as needed */
+button{
+    background-color: rgb(49, 140, 205);
+    box-shadow: #1a90ff;
+    padding: 9px 15px;
+    font-size: 16px;
+    
+    
+
 }
 
-/* Gaya untuk input number dan checkbox */
-input[type="number"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    font-size: 1em;
-}
-
-input[type="checkbox"] {
-    margin-right: 8px;
-}
-
-/* Gaya untuk tombol */
-button {
-    background-color: #4f46e5; /* Warna biru */
-    color: #ffffff;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #4338ca; /* Warna biru yang lebih gelap saat dihover */
-}
-
-/* Gaya untuk teks output */
-#passwordOutput {
-    font-size: 1.2em;
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #f4f4f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    word-wrap: break-word;
-    color: #333;
-}
-
-/* Gaya untuk tombol copy */
-#copyBtn {
-    background-color: #e61b7d; 
-    margin-top: 10px;
-}
-
-#copyBtn:hover {
-    background-color: #1697ec; 
-}
-
-
-  

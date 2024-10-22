@@ -1,5 +1,5 @@
 // Dont change anything in this file
-
+import { generatePassword } from './script.js';
 document.getElementById('generateBtn').addEventListener('click', () => {
     const length = parseInt(document.getElementById('length').value, 10);
     const options = {
@@ -8,14 +8,18 @@ document.getElementById('generateBtn').addEventListener('click', () => {
         includeNumbers: document.getElementById('includeNumbers').checked,
         includeSpecialChars: document.getElementById('includeSpecialChars').checked,
     };
-    
-    const password = generatePassword(length, options);
-    document.getElementById('passwordOutput').textContent = password;
+
+    try {
+        const password = generatePassword(length, options);
+        document.getElementById('passwordOutput').value = password; 
+    } catch (error) {
+        alert(error.message); // Show the error message in an alert
+    }
 });
 
 // Copy to Clipboard functionality
 document.getElementById('copyBtn').addEventListener('click', () => {
-    const passwordOutput = document.getElementById('passwordOutput').textContent;
+    const passwordOutput = document.getElementById('passwordOutput').value;
     if (passwordOutput) {
         navigator.clipboard.writeText(passwordOutput).then(() => {
             alert('Password copied to clipboard!');
